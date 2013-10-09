@@ -1,8 +1,8 @@
 package control;
 
 import view.*;
-//import model.*;
 
+import java.awt.Choice;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -43,15 +43,15 @@ public class ListenerRun implements ActionListener {
 	
     	JTextArea jta = theIhm.getJtaLog();
  	
-    	JComboBox<String> jbc = theIhm.getJcbProtocol();
-    	if( jbc.getSelectedItem()=="TCP"){
+    	//Choice jbc = theIhm.getcProtocol();
+    	//if( jbc.getSelectedItem()=="TCP"){
     	
-    		jta.setText(jta.getText() + "\nLancement du protocole " + jbc.getSelectedItem() + " de transfert de données.");
-    	}
-    	if( jbc.getSelectedItem()=="UDP"){
+    	//	jta.setText(jta.getText() + "\nLancement du protocole " + jbc.getSelectedItem() + " de transfert de données.");
+    	//}
+    	//if( jbc.getSelectedItem()=="UDP"){
         	
-    		jta.setText(jta.getText() + "\nLancement du protocole " + jbc.getSelectedItem() + " de transfert de données.");
-    	}
+    	//	jta.setText(jta.getText() + "\nLancement du protocole " + jbc.getSelectedItem() + " de transfert de données.");
+    	//}
     }
 
 }

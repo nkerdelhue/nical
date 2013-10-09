@@ -33,7 +33,7 @@ public class ClientTCP {
         
             long nbPassages = fileSize / 4096;
         
-            System.out.println("Passages supposés : "+ nbPassages);
+            //System.out.println("Passages supposés : "+ nbPassages);
         
             InputStream in = new BufferedInputStream(new FileInputStream(f));
             ByteArrayOutputStream tableauBytes = new ByteArrayOutputStream();
@@ -60,11 +60,11 @@ public class ClientTCP {
 			{
 			    tampon.write(aEcrire[x]);
 			}
-		    System.out.println("Bite0");                
+		                   
                     //Et on l'envoie
 		    
                     fluxSortie.write(tableauBytes.toByteArray());		    
-		    System.out.println("Bite1");                
+		                 
                     tableauBytes.reset();
                     System.out.println("Avancement : "+(float) avancement / nbPassages * 100 + "%");
                 }
@@ -73,7 +73,7 @@ public class ClientTCP {
 
 
         
-            //On envoie le dernier paquet, qui ne fait pas forcÃ©ment 4096 octets
+            //On envoie le dernier paquet, qui ne fait pas forcement 4096 octets
             //On remplit le tampon
             for(int x = 0; x < 4096; x++)
 		tampon.write(aEcrire[x]);
@@ -85,10 +85,10 @@ public class ClientTCP {
         
             System.out.println("Avancement: "+(float) avancement/nbPassages * 100+"%");
         
-            System.out.println("Transfert terminÃ©");
+            System.out.println("Transfert terminé");
             in.close();
             tampon.close();
-            System.out.println("Passages effectuÃ©s : " + avancement);
+            System.out.println("Passages effectués : " + avancement);
             s.close();
         }
         else{    
