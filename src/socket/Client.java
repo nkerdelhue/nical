@@ -22,8 +22,7 @@ public class Client {
 
             System.out.println("Envoi du fichier "+f.toURI().toURL());
             Socket s = new Socket(InetAddress.getByName(serv),8080);
-	    s.setSoTimeout(10000);
-        
+
             OutputStream fluxSortie = s.getOutputStream();
 	    
 
